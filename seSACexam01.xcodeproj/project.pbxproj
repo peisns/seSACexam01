@@ -16,6 +16,16 @@
 		355C46D9288AA8100077309C /* Select.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355C46D8288AA8100077309C /* Select.storyboard */; };
 		355C46DB288AA8480077309C /* SelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C46DA288AA8480077309C /* SelectCollectionViewController.swift */; };
 		355C46DD288AA8740077309C /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C46DC288AA8740077309C /* SelectCollectionViewCell.swift */; };
+		355C46DF288B75200077309C /* SelectCheck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355C46DE288B75200077309C /* SelectCheck.storyboard */; };
+		355C46E2288B75BC0077309C /* SelectCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C46E1288B75BC0077309C /* SelectCheckViewController.swift */; };
+		355C46E4288B89360077309C /* UIViewContorller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C46E3288B89360077309C /* UIViewContorller+Extension.swift */; };
+		355C46E6288BB5420077309C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C46E5288BB5420077309C /* MainViewController.swift */; };
+		355F465F288BE8AA00692C06 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355F465E288BE8AA00692C06 /* Setting.storyboard */; };
+		355F4661288BE8C200692C06 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355F4660288BE8C200692C06 /* SettingTableViewController.swift */; };
+		355F4668288BEED800692C06 /* Username.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355F4667288BEED800692C06 /* Username.storyboard */; };
+		355F466A288BEEE900692C06 /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355F4669288BEEE900692C06 /* UsernameViewController.swift */; };
+		355F466C288BF5AB00692C06 /* CharacterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355F466B288BF5AB00692C06 /* CharacterInfo.swift */; };
+		355F466F288C1FC100692C06 /* UserdefaultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355F466E288C1FC100692C06 /* UserdefaultData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +40,16 @@
 		355C46D8288AA8100077309C /* Select.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Select.storyboard; sourceTree = "<group>"; };
 		355C46DA288AA8480077309C /* SelectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewController.swift; sourceTree = "<group>"; };
 		355C46DC288AA8740077309C /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
+		355C46DE288B75200077309C /* SelectCheck.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCheck.storyboard; sourceTree = "<group>"; };
+		355C46E1288B75BC0077309C /* SelectCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCheckViewController.swift; sourceTree = "<group>"; };
+		355C46E3288B89360077309C /* UIViewContorller+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewContorller+Extension.swift"; sourceTree = "<group>"; };
+		355C46E5288BB5420077309C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		355F465E288BE8AA00692C06 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		355F4660288BE8C200692C06 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		355F4667288BEED800692C06 /* Username.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Username.storyboard; sourceTree = "<group>"; };
+		355F4669288BEEE900692C06 /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
+		355F466B288BF5AB00692C06 /* CharacterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfo.swift; sourceTree = "<group>"; };
+		355F466E288C1FC100692C06 /* UserdefaultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserdefaultData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +83,15 @@
 			isa = PBXGroup;
 			children = (
 				355C46D7288AA7EC0077309C /* Select */,
+				355C46E0288B75270077309C /* SelectCheck */,
+				355C46E7288BB5470077309C /* Main */,
+				355F465D288BE89F00692C06 /* Setting */,
+				355F466E288C1FC100692C06 /* UserdefaultData.swift */,
+				355F466B288BF5AB00692C06 /* CharacterInfo.swift */,
+				355C46E3288B89360077309C /* UIViewContorller+Extension.swift */,
 				355C46C3288A7E140077309C /* AppDelegate.swift */,
 				355C46C5288A7E140077309C /* SceneDelegate.swift */,
 				355C46C7288A7E140077309C /* ViewController.swift */,
-				355C46C9288A7E140077309C /* Main.storyboard */,
 				355C46CC288A7E160077309C /* Assets.xcassets */,
 				355C46CE288A7E160077309C /* LaunchScreen.storyboard */,
 				355C46D1288A7E160077309C /* Info.plist */,
@@ -82,6 +107,43 @@
 				355C46DA288AA8480077309C /* SelectCollectionViewController.swift */,
 			);
 			path = Select;
+			sourceTree = "<group>";
+		};
+		355C46E0288B75270077309C /* SelectCheck */ = {
+			isa = PBXGroup;
+			children = (
+				355C46DE288B75200077309C /* SelectCheck.storyboard */,
+				355C46E1288B75BC0077309C /* SelectCheckViewController.swift */,
+			);
+			path = SelectCheck;
+			sourceTree = "<group>";
+		};
+		355C46E7288BB5470077309C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				355C46C9288A7E140077309C /* Main.storyboard */,
+				355C46E5288BB5420077309C /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		355F465D288BE89F00692C06 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				355F465E288BE8AA00692C06 /* Setting.storyboard */,
+				355F4660288BE8C200692C06 /* SettingTableViewController.swift */,
+				355F4664288BEE9A00692C06 /* Username */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		355F4664288BEE9A00692C06 /* Username */ = {
+			isa = PBXGroup;
+			children = (
+				355F4667288BEED800692C06 /* Username.storyboard */,
+				355F4669288BEEE900692C06 /* UsernameViewController.swift */,
+			);
+			path = Username;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,10 +204,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355C46DF288B75200077309C /* SelectCheck.storyboard in Resources */,
 				355C46D9288AA8100077309C /* Select.storyboard in Resources */,
 				355C46D0288A7E160077309C /* LaunchScreen.storyboard in Resources */,
 				355C46CD288A7E160077309C /* Assets.xcassets in Resources */,
 				355C46CB288A7E140077309C /* Main.storyboard in Resources */,
+				355F465F288BE8AA00692C06 /* Setting.storyboard in Resources */,
+				355F4668288BEED800692C06 /* Username.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,11 +221,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355F466A288BEEE900692C06 /* UsernameViewController.swift in Sources */,
 				355C46DD288AA8740077309C /* SelectCollectionViewCell.swift in Sources */,
+				355F466F288C1FC100692C06 /* UserdefaultData.swift in Sources */,
+				355C46E2288B75BC0077309C /* SelectCheckViewController.swift in Sources */,
 				355C46C8288A7E140077309C /* ViewController.swift in Sources */,
+				355C46E4288B89360077309C /* UIViewContorller+Extension.swift in Sources */,
 				355C46C4288A7E140077309C /* AppDelegate.swift in Sources */,
 				355C46DB288AA8480077309C /* SelectCollectionViewController.swift in Sources */,
+				355F4661288BE8C200692C06 /* SettingTableViewController.swift in Sources */,
 				355C46C6288A7E140077309C /* SceneDelegate.swift in Sources */,
+				355F466C288BF5AB00692C06 /* CharacterInfo.swift in Sources */,
+				355C46E6288BB5420077309C /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

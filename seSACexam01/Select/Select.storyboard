@@ -30,13 +30,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1-1" translatesAutoresizingMaskIntoConstraints="NO" id="Q1V-oG-ow1">
-                                            <rect key="frame" x="8" y="8" width="134" height="134"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Q1V-oG-ow1">
+                                            <rect key="frame" x="8" y="8.5" width="134" height="133"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Q1V-oG-ow1" secondAttribute="height" multiplier="1:1" id="vhH-TX-vaH"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="따끔따끔 다마고치" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwK-Sr-wOZ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwK-Sr-wOZ">
                                             <rect key="frame" x="0.0" y="150" width="150" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="rRd-vB-PjE"/>
@@ -56,6 +56,10 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="150" height="180"/>
+                                <connections>
+                                    <outlet property="characterImage" destination="Q1V-oG-ow1" id="CWR-16-Ycd"/>
+                                    <outlet property="charaterNameLabel" destination="jwK-Sr-wOZ" id="e8b-KR-1Bz"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -85,11 +89,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HM4-gU-nd2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="47"/>
+            <point key="canvasLocation" x="-97" y="47"/>
         </scene>
     </scenes>
     <resources>
-        <image name="1-1" width="152" height="151"/>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

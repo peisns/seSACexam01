@@ -9,4 +9,9 @@ import UIKit
 
 class SelectCollectionViewCell: UICollectionViewCell {
     static let identifier = "SelectCollectionViewCell"
+    
+    @IBOutlet weak var characterImage: UIImageView!
+    @IBOutlet weak var charaterNameLabel: UILabel!
+    
+    
 }
