@@ -22,10 +22,9 @@ class SelectCheckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let characterdata = CharactersInfo().characters[temporaryIndex]
         selectedCharacterImage.image = UIImage(named: "\(temporaryIndex + 1)-6")
-        selectedCharacterName.text = characterdata.name
-        selectedCharacterExplanation.text = characterdata.introduction
+        selectedCharacterName.text = CharactersInfo.characters[temporaryIndex].name
+        selectedCharacterExplanation.text = CharactersInfo.characters[temporaryIndex].introduction
         selectedCharacterExplanation.textAlignment = .center
         
         cancelButton.setTitle("취소", for: .normal)

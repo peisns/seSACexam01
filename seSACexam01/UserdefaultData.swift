@@ -10,9 +10,7 @@ import Foundation
 enum UserDefaultsInfo: String {
 case selectedCharacterIndexTemporary
 case selectedCharacterIndexFixed
+case characterMealCount
+case characterWaterCount
+case userNickname
 }
-//
-//
-//struct UserDefaultInfo {
-//    var selectedCharacter: CharacterList
-//}

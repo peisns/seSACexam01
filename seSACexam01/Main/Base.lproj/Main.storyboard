@@ -52,10 +52,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ma-M3-5Xs">
-                                <rect key="frame" x="235" y="511" width="81" height="31"/>
+                                <rect key="frame" x="225" y="511" width="91" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system" title="Button"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DOc-q4-fkt">
                                 <rect key="frame" x="109" y="551" width="97" height="34"/>
@@ -64,10 +64,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-1x-fPw">
-                                <rect key="frame" x="235" y="553" width="81" height="31"/>
+                                <rect key="frame" x="225" y="553" width="91" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system" title="Button"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -88,8 +88,10 @@
                         <outlet property="characterWordBackImage" destination="Hta-fM-lja" id="dFg-Rb-WTN"/>
                         <outlet property="characterWordTextLabel" destination="cnL-9H-hyH" id="kIz-TG-4ff"/>
                         <outlet property="mealTextField" destination="cGx-Bv-hVE" id="qXI-R9-QlS"/>
+                        <outlet property="rightBarButtonToSetting" destination="N4y-Zf-PgP" id="7Vc-HE-g5j"/>
                         <outlet property="waterTextField" destination="DOc-q4-fkt" id="vpL-t3-cHH"/>
                         <outletCollection property="mealAndWaterButtonCollection" destination="8Ma-M3-5Xs" collectionClass="NSMutableArray" id="5Ni-oC-uim"/>
+                        <outletCollection property="mealAndWaterButtonCollection" destination="Uk7-1x-fPw" collectionClass="NSMutableArray" id="KAL-uJ-rwH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

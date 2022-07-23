@@ -24,8 +24,9 @@
 		355F4661288BE8C200692C06 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355F4660288BE8C200692C06 /* SettingTableViewController.swift */; };
 		355F4668288BEED800692C06 /* Username.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355F4667288BEED800692C06 /* Username.storyboard */; };
 		355F466A288BEEE900692C06 /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355F4669288BEEE900692C06 /* UsernameViewController.swift */; };
-		355F466C288BF5AB00692C06 /* CharacterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355F466B288BF5AB00692C06 /* CharacterInfo.swift */; };
+		355F466C288BF5AB00692C06 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355F466B288BF5AB00692C06 /* UserData.swift */; };
 		355F466F288C1FC100692C06 /* UserdefaultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355F466E288C1FC100692C06 /* UserdefaultData.swift */; };
+		355F4674288C657C00692C06 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 355F4673288C657C00692C06 /* TextFieldEffects */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +49,7 @@
 		355F4660288BE8C200692C06 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		355F4667288BEED800692C06 /* Username.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Username.storyboard; sourceTree = "<group>"; };
 		355F4669288BEEE900692C06 /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
-		355F466B288BF5AB00692C06 /* CharacterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfo.swift; sourceTree = "<group>"; };
+		355F466B288BF5AB00692C06 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		355F466E288C1FC100692C06 /* UserdefaultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserdefaultData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355F4674288C657C00692C06 /* TextFieldEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +89,7 @@
 				355C46E7288BB5470077309C /* Main */,
 				355F465D288BE89F00692C06 /* Setting */,
 				355F466E288C1FC100692C06 /* UserdefaultData.swift */,
-				355F466B288BF5AB00692C06 /* CharacterInfo.swift */,
+				355F466B288BF5AB00692C06 /* UserData.swift */,
 				355C46E3288B89360077309C /* UIViewContorller+Extension.swift */,
 				355C46C3288A7E140077309C /* AppDelegate.swift */,
 				355C46C5288A7E140077309C /* SceneDelegate.swift */,
@@ -162,6 +164,9 @@
 			dependencies = (
 			);
 			name = seSACexam01;
+			packageProductDependencies = (
+				355F4673288C657C00692C06 /* TextFieldEffects */,
+			);
 			productName = seSACexam01;
 			productReference = 355C46C0288A7E140077309C /* seSACexam01.app */;
 			productType = "com.apple.product-type.application";
@@ -190,6 +195,9 @@
 				Base,
 			);
 			mainGroup = 355C46B7288A7E140077309C;
+			packageReferences = (
+				355F4672288C657C00692C06 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+			);
 			productRefGroup = 355C46C1288A7E140077309C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,7 +239,7 @@
 				355C46DB288AA8480077309C /* SelectCollectionViewController.swift in Sources */,
 				355F4661288BE8C200692C06 /* SettingTableViewController.swift in Sources */,
 				355C46C6288A7E140077309C /* SceneDelegate.swift in Sources */,
-				355F466C288BF5AB00692C06 /* CharacterInfo.swift in Sources */,
+				355F466C288BF5AB00692C06 /* UserData.swift in Sources */,
 				355C46E6288BB5420077309C /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +462,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		355F4672288C657C00692C06 /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		355F4673288C657C00692C06 /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 355F4672288C657C00692C06 /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 355C46B8288A7E140077309C /* Project object */;
 }

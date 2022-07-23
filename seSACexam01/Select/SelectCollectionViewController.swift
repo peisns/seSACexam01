@@ -42,9 +42,9 @@ class SelectCollectionViewController: UICollectionViewController {
         cell.charaterNameLabel.textColor = commonFontAndBorderColor()
 
         switch indexPath.row {
-        case 0 ... (CharacterEnum.allCases.count - 1):
+        case 0 ... (CharactersInfo.characters.count - 1):
             cell.characterImage.image = UIImage(named: "\(indexPath.row + 1)-6")
-            cell.charaterNameLabel.text = CharacterEnum.allCases[indexPath.row].rawValue
+            cell.charaterNameLabel.text = CharactersInfo.characters[indexPath.row].name
         default:
             cell.characterImage.image = UIImage(named: "noImage")
             cell.charaterNameLabel.text = "준비중이에요"
@@ -55,7 +55,7 @@ class SelectCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //UserDefaults에 캐릭터List중에 임시로 선택한 캐릭터 저장
         
-        if indexPath.row < CharacterEnum.allCases.count {
+        if indexPath.row < CharactersInfo.characters.count {
             UserDefaults.standard.set(indexPath.row, forKey: UserDefaultsInfo.selectedCharacterIndexTemporary.rawValue)
             let sb = UIStoryboard(name: "SelectCheck", bundle: nil)
             guard let vc = sb.instantiateViewController(withIdentifier: SelectCheckViewController.identifier) as? SelectCheckViewController else {
