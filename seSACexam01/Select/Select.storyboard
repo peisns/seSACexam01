@@ -37,20 +37,16 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwK-Sr-wOZ">
-                                            <rect key="frame" x="0.0" y="150" width="150" height="20"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="rRd-vB-PjE"/>
-                                            </constraints>
+                                            <rect key="frame" x="59.5" y="150" width="31" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="jwK-Sr-wOZ" firstAttribute="leading" secondItem="K6b-af-NdS" secondAttribute="leading" id="2LY-se-rA7"/>
+                                        <constraint firstItem="jwK-Sr-wOZ" firstAttribute="top" secondItem="Q1V-oG-ow1" secondAttribute="bottom" constant="8" id="00s-A2-Wpf"/>
                                         <constraint firstItem="Q1V-oG-ow1" firstAttribute="leading" secondItem="K6b-af-NdS" secondAttribute="leading" constant="8" id="Fxu-9z-o9j"/>
-                                        <constraint firstAttribute="trailing" secondItem="jwK-Sr-wOZ" secondAttribute="trailing" id="LOI-rD-z1n"/>
-                                        <constraint firstItem="jwK-Sr-wOZ" firstAttribute="top" secondItem="Q1V-oG-ow1" secondAttribute="bottom" constant="8" id="Qff-Hn-FeE"/>
+                                        <constraint firstItem="jwK-Sr-wOZ" firstAttribute="centerX" secondItem="K6b-af-NdS" secondAttribute="centerX" id="WF8-Sy-PDE"/>
                                         <constraint firstItem="Q1V-oG-ow1" firstAttribute="top" secondItem="K6b-af-NdS" secondAttribute="top" constant="8" id="eYc-n5-AbB"/>
                                         <constraint firstAttribute="trailing" secondItem="Q1V-oG-ow1" secondAttribute="trailing" constant="8" id="xio-Kr-8gV"/>
                                     </constraints>

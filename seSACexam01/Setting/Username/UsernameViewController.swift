@@ -11,23 +11,19 @@ class UsernameViewController: UIViewController {
 
     static let identifier = "UsernameViewController"
     
+    @IBOutlet weak var nicknameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "대장님 이름 정하기"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: nil, action: nil)
-        // Do any additional setup after loading the view.
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(saveUserNickname))
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func saveUserNickname() {
+        UserDefaults.standard.set(nicknameTextField.text, forKey: UserDefaultsInfo.userNickname.rawValue)
+        navigationController?.popViewController(animated: true)
     }
-    */
+    
 
 }

@@ -40,6 +40,9 @@ class SelectCollectionViewController: UICollectionViewController {
         }
         
         cell.charaterNameLabel.textColor = commonFontAndBorderColor()
+        cell.charaterNameLabel.layer.borderColor = commonFontAndBorderColor().cgColor
+        cell.charaterNameLabel.layer.borderWidth = 1
+        cell.charaterNameLabel.layer.cornerRadius = 5
 
         switch indexPath.row {
         case 0 ... (CharactersInfo.characters.count - 1):

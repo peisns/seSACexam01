@@ -13,4 +13,5 @@ case selectedCharacterIndexFixed
 case characterMealCount
 case characterWaterCount
 case userNickname
+case isCharacterSelected
 }
