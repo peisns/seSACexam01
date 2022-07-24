@@ -36,17 +36,16 @@
                                                 <constraint firstAttribute="width" secondItem="Q1V-oG-ow1" secondAttribute="height" multiplier="1:1" id="vhH-TX-vaH"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwK-Sr-wOZ">
-                                            <rect key="frame" x="59.5" y="150" width="31" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHO-Ec-T7O">
+                                            <rect key="frame" x="52" y="142" width="46" height="30"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="jwK-Sr-wOZ" firstAttribute="top" secondItem="Q1V-oG-ow1" secondAttribute="bottom" constant="8" id="00s-A2-Wpf"/>
+                                        <constraint firstItem="rHO-Ec-T7O" firstAttribute="centerX" secondItem="K6b-af-NdS" secondAttribute="centerX" id="0dG-yH-C9H"/>
                                         <constraint firstItem="Q1V-oG-ow1" firstAttribute="leading" secondItem="K6b-af-NdS" secondAttribute="leading" constant="8" id="Fxu-9z-o9j"/>
-                                        <constraint firstItem="jwK-Sr-wOZ" firstAttribute="centerX" secondItem="K6b-af-NdS" secondAttribute="centerX" id="WF8-Sy-PDE"/>
+                                        <constraint firstItem="rHO-Ec-T7O" firstAttribute="top" secondItem="Q1V-oG-ow1" secondAttribute="bottom" id="eV5-Rd-oG9"/>
                                         <constraint firstItem="Q1V-oG-ow1" firstAttribute="top" secondItem="K6b-af-NdS" secondAttribute="top" constant="8" id="eYc-n5-AbB"/>
                                         <constraint firstAttribute="trailing" secondItem="Q1V-oG-ow1" secondAttribute="trailing" constant="8" id="xio-Kr-8gV"/>
                                     </constraints>
@@ -54,7 +53,7 @@
                                 <size key="customSize" width="150" height="180"/>
                                 <connections>
                                     <outlet property="characterImage" destination="Q1V-oG-ow1" id="CWR-16-Ycd"/>
-                                    <outlet property="charaterNameLabel" destination="jwK-Sr-wOZ" id="e8b-KR-1Bz"/>
+                                    <outlet property="characterNameButton" destination="rHO-Ec-T7O" id="NTa-Zl-5yA"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

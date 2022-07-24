@@ -39,18 +39,21 @@ class SelectCollectionViewController: UICollectionViewController {
             return UICollectionViewCell()
         }
         
-        cell.charaterNameLabel.textColor = commonFontAndBorderColor()
-        cell.charaterNameLabel.layer.borderColor = commonFontAndBorderColor().cgColor
-        cell.charaterNameLabel.layer.borderWidth = 1
-        cell.charaterNameLabel.layer.cornerRadius = 5
-
+        cell.characterNameButton.titleLabel?.font = .systemFont(ofSize: 14)
+        cell.characterNameButton.isEnabled = false
+        cell.characterNameButton.setTitleColor(commonFontAndBorderColor(), for: .normal)
+        cell.characterNameButton.layer.borderWidth = 1
+        cell.characterNameButton.layer.borderColor = commonFontAndBorderColor().cgColor
+        cell.characterNameButton.layer.cornerRadius = 5
+//        cell.characterNameButton.sizeToFit()
+        
         switch indexPath.row {
-        case 0 ... (CharactersInfo.characters.count - 1):
+        case 0..<CharactersInfo.characters.count:
+            cell.characterNameButton.setTitle(CharactersInfo.characters[indexPath.row].name, for: .normal)
             cell.characterImage.image = UIImage(named: "\(indexPath.row + 1)-6")
-            cell.charaterNameLabel.text = CharactersInfo.characters[indexPath.row].name
         default:
+            cell.characterNameButton.setTitle("준비중이에요", for: .normal)
             cell.characterImage.image = UIImage(named: "noImage")
-            cell.charaterNameLabel.text = "준비중이에요"
         }
         return cell
     }
