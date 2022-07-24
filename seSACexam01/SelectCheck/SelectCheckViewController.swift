@@ -12,9 +12,11 @@ class SelectCheckViewController: UIViewController {
     static let identifier = "SelectCheckViewController"
 
     @IBOutlet weak var selectedCharacterImage: UIImageView!
-    @IBOutlet weak var selectedCharacterName: UILabel!
+    @IBOutlet weak var selectedCharacterNameButton: UIButton!
+    @IBOutlet weak var middleLine: UIView!
     @IBOutlet weak var selectedCharacterExplanation: UITextView!
     
+    @IBOutlet weak var buttonTopLine: UIView!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var checkButton: UIButton!
     
@@ -22,13 +24,40 @@ class SelectCheckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //show selected character image
         selectedCharacterImage.image = UIImage(named: "\(temporaryIndex + 1)-6")
-        selectedCharacterName.text = CharactersInfo.characters[temporaryIndex].name
+        
+        //show and design character name
+        selectedCharacterNameButton.setTitle(CharactersInfo.characters[temporaryIndex].name, for: .normal)
+        selectedCharacterNameButton.setTitleColor(commonFontAndBorderColor(), for: .normal)
+        selectedCharacterNameButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
+        selectedCharacterNameButton.layer.borderColor = commonFontAndBorderColor().cgColor
+        selectedCharacterNameButton.layer.borderWidth = 1
+        selectedCharacterNameButton.layer.cornerRadius = 5
+        
+        //design middle line
+        middleLine.layer.borderColor = commonFontAndBorderColor().cgColor
+        middleLine.layer.borderWidth = 1
+        
+        // show choaracter explanation
         selectedCharacterExplanation.text = CharactersInfo.characters[temporaryIndex].introduction
         selectedCharacterExplanation.textAlignment = .center
+        selectedCharacterExplanation.textColor = commonFontAndBorderColor()
+        selectedCharacterExplanation.font = .systemFont(ofSize: 13)
         
+        //design button Top line
+        buttonTopLine.layer.borderWidth = 1
+        buttonTopLine.layer.borderColor = UIColor.systemGray4.cgColor
+        
+        //design cancel button
         cancelButton.setTitle("취소", for: .normal)
+        cancelButton.setTitleColor(commonFontAndBorderColor(), for: .normal)
+        cancelButton.backgroundColor = .systemGray6
+        
+        //design start button
         checkButton.setTitle("시작하기", for: .normal)
+        checkButton.setTitleColor(commonFontAndBorderColor(), for: .normal)
         
     }
     

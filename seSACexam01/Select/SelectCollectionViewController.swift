@@ -39,7 +39,8 @@ class SelectCollectionViewController: UICollectionViewController {
             return UICollectionViewCell()
         }
         
-        cell.characterNameButton.titleLabel?.font = .systemFont(ofSize: 14)
+        cell.characterNameButton.titleLabel?.font = .systemFont(ofSize: 13)
+        cell.characterNameButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
         cell.characterNameButton.isEnabled = false
         cell.characterNameButton.setTitleColor(commonFontAndBorderColor(), for: .normal)
         cell.characterNameButton.layer.borderWidth = 1
