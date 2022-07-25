@@ -46,7 +46,7 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="eSw-Xz-zEV" firstAttribute="centerX" secondItem="H7H-2A-seu" secondAttribute="centerX" id="U1B-WK-sOs"/>
                                                     <constraint firstItem="Saa-4m-gox" firstAttribute="height" secondItem="H7H-2A-seu" secondAttribute="height" multiplier="0.5" id="eTN-uk-DvG"/>
@@ -55,8 +55,8 @@
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TQm-zj-ivK">
                                                 <rect key="frame" x="44" y="284" width="238" height="145"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -77,7 +77,6 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="TQm-zj-ivK" firstAttribute="leading" secondItem="ghm-TF-hZG" secondAttribute="leading" constant="44" id="4vB-fD-cP7"/>
                                             <constraint firstItem="jLG-dw-kYw" firstAttribute="leading" secondItem="ghm-TF-hZG" secondAttribute="leading" constant="44" id="EpI-5I-nad"/>
@@ -145,6 +144,7 @@
                         <outlet property="buttonTopLine" destination="Ll2-Q0-M04" id="lHe-n2-A1c"/>
                         <outlet property="cancelButton" destination="BzU-Qi-RRf" id="E0V-we-opS"/>
                         <outlet property="checkButton" destination="0Ll-Nv-PZI" id="9FH-MP-c5N"/>
+                        <outlet property="fullPopUpView" destination="Gqw-a2-KHH" id="wcM-7u-ve9"/>
                         <outlet property="middleLine" destination="jLG-dw-kYw" id="V3h-Ev-b2e"/>
                         <outlet property="selectedCharacterExplanation" destination="TQm-zj-ivK" id="rOr-jC-m2p"/>
                         <outlet property="selectedCharacterImage" destination="Saa-4m-gox" id="4rH-m8-yU4"/>

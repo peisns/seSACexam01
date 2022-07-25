@@ -165,6 +165,8 @@
                         <outlet property="waterTextField" destination="DOc-q4-fkt" id="vpL-t3-cHH"/>
                         <outletCollection property="mealAndWaterButtonCollection" destination="8Ma-M3-5Xs" collectionClass="NSMutableArray" id="5Ni-oC-uim"/>
                         <outletCollection property="mealAndWaterButtonCollection" destination="Uk7-1x-fPw" collectionClass="NSMutableArray" id="KAL-uJ-rwH"/>
+                        <outletCollection property="mealAndWaterTextFieldCollection" destination="cGx-Bv-hVE" collectionClass="NSMutableArray" id="CUe-ht-27x"/>
+                        <outletCollection property="mealAndWaterTextFieldCollection" destination="DOc-q4-fkt" collectionClass="NSMutableArray" id="FEh-dT-6u1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

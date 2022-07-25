@@ -17,6 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         if UserDefaults.standard.bool(forKey: UserDefaultsInfo.isCharacterSelected.rawValue) {
+            // root view controller is Main scene when user selects a character
             let sb = UIStoryboard(name: "Main", bundle: nil)
             guard let vc = sb.instantiateViewController(withIdentifier: MainViewController.identifier) as? MainViewController else {
                 print(#function)
@@ -24,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let nav = UINavigationController(rootViewController: vc)
             window?.rootViewController = nav
         } else {
+            // root view controller is Select scene because there isn't a selected character
             let sb = UIStoryboard(name: "Select", bundle: nil)
             guard let vc = sb.instantiateViewController(withIdentifier: SelectCollectionViewController.identifier) as? SelectCollectionViewController else {
                 print(#function)

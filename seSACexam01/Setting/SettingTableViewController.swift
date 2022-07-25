@@ -11,6 +11,9 @@ class SettingTableViewController: UITableViewController {
     
     static let identifier = "SettingTableViewController"
     
+    @IBOutlet var mainTableView: UITableView!
+    
+    @IBOutlet var mainTableViewCell: [UITableViewCell]!
     
     @IBOutlet var cellImageCollection: [UIImageView]!
     @IBOutlet var cellTitleCollection: [UILabel]!
@@ -18,6 +21,12 @@ class SettingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set background color
+        view.backgroundColor = commonBackgroundColor()
+        for cell in mainTableViewCell {
+            cell.backgroundColor = commonBackgroundColor()
+        }
 
         cellImageCollection[0].image = UIImage(systemName: "pencil")
         cellImageCollection[1].image = UIImage(systemName: "moon.fill")
@@ -33,9 +42,8 @@ class SettingTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        // show Nickname
         myNicknameDetailLabel.text = UserDefaults.standard.string(forKey: UserDefaultsInfo.userNickname.rawValue)
-    
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -48,12 +56,15 @@ class SettingTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
+        //push to Username scene to change nickname
         case 0:
             let sb = UIStoryboard(name: "Username", bundle: nil)
             guard let vc = sb.instantiateViewController(withIdentifier: UsernameViewController.identifier) as? UsernameViewController else {
             showAlert(message: "잘못된 스토리보드입니다")
             return }
             navigationController?.pushViewController(vc, animated: true)
+            
+        //push to Select scene to change character
         case 1:
             let sb = UIStoryboard(name: "Select", bundle: nil)
             guard let vc = sb.instantiateViewController(withIdentifier: SelectCollectionViewController.identifier) as? SelectCollectionViewController else {
@@ -61,6 +72,7 @@ class SettingTableViewController: UITableViewController {
                 return }
             navigationController?.pushViewController(vc, animated: true)
             
+        //present alert to check data reset process
         case 2:
             let alert = UIAlertController(title: "중요", message: "데이터를 초기화하시겠습니까?\n초기화를 실행하면 데이터를 복구할 수 없습니다.", preferredStyle: .alert)
             let ok = UIAlertAction(title: "확인", style: .default){(_) in
@@ -77,12 +89,15 @@ class SettingTableViewController: UITableViewController {
         }
     }
     
+    /// function to reset data and change root view controller to select scene
     func resetData() {
+        //reset UserDefaults value
         UserDefaults.standard.set("대장", forKey: UserDefaultsInfo.userNickname.rawValue)
         UserDefaults.standard.set(0, forKey: UserDefaultsInfo.characterMealCount.rawValue)
         UserDefaults.standard.set(0, forKey: UserDefaultsInfo.characterWaterCount.rawValue)
         UserDefaults.standard.set(false, forKey: UserDefaultsInfo.isCharacterSelected.rawValue)
         
+        //change root view controller to Select scene
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         let sceneDelegate = windowScene?.delegate as? SceneDelegate
 

@@ -19,6 +19,7 @@ class SelectCollectionViewController: UICollectionViewController {
                 
         collectionView.backgroundColor = commonBackgroundColor()
         
+        // design cell layout
         let cellLayout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 16
         let screenWidth = UIScreen.main.bounds.width - (spacing * 4 + 1)
@@ -39,15 +40,11 @@ class SelectCollectionViewController: UICollectionViewController {
             return UICollectionViewCell()
         }
         
-        cell.characterNameButton.titleLabel?.font = .systemFont(ofSize: 13)
-        cell.characterNameButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
+        // design cell
         cell.characterNameButton.isEnabled = false
-        cell.characterNameButton.setTitleColor(commonFontAndBorderColor(), for: .normal)
-        cell.characterNameButton.layer.borderWidth = 1
-        cell.characterNameButton.layer.borderColor = commonFontAndBorderColor().cgColor
-        cell.characterNameButton.layer.cornerRadius = 5
-//        cell.characterNameButton.sizeToFit()
+        designCommonButtonStyle(buttonName: cell.characterNameButton)
         
+        // show character name and image
         switch indexPath.row {
         case 0..<CharactersInfo.characters.count:
             cell.characterNameButton.setTitle(CharactersInfo.characters[indexPath.row].name, for: .normal)
@@ -60,10 +57,11 @@ class SelectCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //UserDefaults에 캐릭터List중에 임시로 선택한 캐릭터 저장
-        
-        if indexPath.row < CharactersInfo.characters.count {
-            UserDefaults.standard.set(indexPath.row, forKey: UserDefaultsInfo.selectedCharacterIndexTemporary.rawValue)
+        if indexPath.row < CharactersInfo.characters.count { // when character is selected
+            //save temporary character index
+            UserDefaults.standard.set(indexPath.row, forKey:  UserDefaultsInfo.selectedCharacterIndexTemporary.rawValue)
+            
+            //present select check scene
             let sb = UIStoryboard(name: "SelectCheck", bundle: nil)
             guard let vc = sb.instantiateViewController(withIdentifier: SelectCheckViewController.identifier) as? SelectCheckViewController else {
                 showAlert(message: "잘못된 스토리보드입니다.")
