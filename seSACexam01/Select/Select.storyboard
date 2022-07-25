@@ -37,14 +37,13 @@
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHO-Ec-T7O">
-                                            <rect key="frame" x="49.5" y="146" width="51" height="26"/>
+                                            <rect key="frame" x="71" y="146" width="8" height="26"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="26" id="Z9e-Cc-xPc"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="Button"/>
                                         </button>
                                     </subviews>
                                     <constraints>

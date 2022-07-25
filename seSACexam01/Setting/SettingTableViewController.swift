@@ -54,6 +54,13 @@ class SettingTableViewController: UITableViewController {
             showAlert(message: "잘못된 스토리보드입니다")
             return }
             navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            let sb = UIStoryboard(name: "Select", bundle: nil)
+            guard let vc = sb.instantiateViewController(withIdentifier: SelectCollectionViewController.identifier) as? SelectCollectionViewController else {
+                showAlert(message: "잘못된 스토리보드입니다")
+                return }
+            navigationController?.pushViewController(vc, animated: true)
+            
         case 2:
             let alert = UIAlertController(title: "중요", message: "데이터를 초기화하시겠습니까?\n초기화를 실행하면 데이터를 복구할 수 없습니다.", preferredStyle: .alert)
             let ok = UIAlertAction(title: "확인", style: .default){(_) in
@@ -74,10 +81,11 @@ class SettingTableViewController: UITableViewController {
         UserDefaults.standard.set("대장", forKey: UserDefaultsInfo.userNickname.rawValue)
         UserDefaults.standard.set(0, forKey: UserDefaultsInfo.characterMealCount.rawValue)
         UserDefaults.standard.set(0, forKey: UserDefaultsInfo.characterWaterCount.rawValue)
+        UserDefaults.standard.set(false, forKey: UserDefaultsInfo.isCharacterSelected.rawValue)
         
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         let sceneDelegate = windowScene?.delegate as? SceneDelegate
-        
+
         let sb = UIStoryboard(name: "Select", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: SelectCollectionViewController.identifier) as? SelectCollectionViewController else {
         showAlert(message: "잘못된 스토리보드입니다")

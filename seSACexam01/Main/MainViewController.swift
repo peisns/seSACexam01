@@ -110,6 +110,18 @@ class MainViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func textConvertToDigit(_ sender: UITextField) {
+        if sender.tag == 0 {
+            let convertDigit = mealTextField.text!.replacingOccurrences(of: #"\D"#, with: "", options: .regularExpression)
+            mealTextField.text = convertDigit
+        } else if sender.tag == 1 {
+            let convertDigit = waterTextField.text!.replacingOccurrences(of: #"\D"#, with: "", options: .regularExpression)
+            waterTextField.text = convertDigit
+        } else {
+            showAlert(message: "오류가 발생했습니다(convert to digit" )
+        }
+    }
+    
     
     @IBAction func mealAndWaterTextFieldReturn(_ sender: UITextField) {
         addMealAndWaterCount(senderTag: sender.tag)
@@ -154,12 +166,12 @@ class MainViewController: UIViewController {
                 let inputCount = Int(waterTextField.text!) ?? 0 // text is vaild
                 waterTextField.text = "" // clear text field
                 switch inputCount {
-                case 0...99: // feed
+                case 0...49: // feed
                     newWaterCount = UserDefaults.standard.integer(forKey: UserDefaultsInfo.characterWaterCount.rawValue) + inputCount
                     UserDefaults.standard.set(newWaterCount, forKey: UserDefaultsInfo.characterWaterCount.rawValue)
                     updateCharacterExpAndWordsLabel()
-                case 100...: // alert because the number is too big
-                    showAlert(message: "밥을 100 이상 줄 수 없어요")
+                case 50...: // alert because the number is too big
+                    showAlert(message: "물을 50 이상 줄 수 없어요")
                 default: // alert because wrong number is inputted
                     showAlert(message: "잘못된 숫자입니다")
                 }

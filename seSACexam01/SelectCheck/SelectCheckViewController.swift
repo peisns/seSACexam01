@@ -56,9 +56,12 @@ class SelectCheckViewController: UIViewController {
         cancelButton.backgroundColor = .systemGray6
         
         //design start button
-        checkButton.setTitle("시작하기", for: .normal)
+        if UserDefaults.standard.bool(forKey: UserDefaultsInfo.isCharacterSelected.rawValue) {
+            checkButton.setTitle("변경하기", for: .normal)
+        } else {
+            checkButton.setTitle("시작하기", for: .normal)
+        }
         checkButton.setTitleColor(commonFontAndBorderColor(), for: .normal)
-        
     }
     
 
@@ -70,13 +73,27 @@ class SelectCheckViewController: UIViewController {
     @IBAction func checkButtonClicked(_ sender: UIButton) {
         UserDefaults.standard.set(temporaryIndex, forKey: UserDefaultsInfo.selectedCharacterIndexFixed.rawValue)
         UserDefaults.standard.set(true, forKey: UserDefaultsInfo.isCharacterSelected.rawValue)
+        
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let sceneDelete = windowScene?.delegate as? SceneDelegate
+        
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else {
-            showAlert(message: "잘못된 스토리보드입니다")
+        guard let vc = sb.instantiateViewController(withIdentifier: MainViewController.identifier) as? MainViewController else {
+            showAlert(message: "잘못된 스토리보드 입니다")
             return }
         let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
-        present(nav, animated: false)
+        
+        sceneDelete?.window?.rootViewController = nav
+        sceneDelete?.window?.makeKeyAndVisible()
+        
+        
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        guard let vc = sb.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else {
+//            showAlert(message: "잘못된 스토리보드입니다")
+//            return }
+//        let nav = UINavigationController(rootViewController: vc)
+//        nav.modalPresentationStyle = .fullScreen
+//        present(nav, animated: false)
     }
     
     

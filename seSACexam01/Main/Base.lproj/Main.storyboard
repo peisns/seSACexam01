@@ -63,6 +63,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="mealAndWaterTextFieldReturn:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Oh0-3g-Amd"/>
+                                            <action selector="textConvertToDigit:" destination="BYZ-38-t0r" eventType="editingChanged" id="hut-W1-tFj"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ma-M3-5Xs">
@@ -91,6 +92,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="164" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="mealAndWaterTextFieldReturn:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="aTV-DD-8X4"/>
+                                            <action selector="textConvertToDigit:" destination="BYZ-38-t0r" eventType="editingChanged" id="bih-80-931"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-1x-fPw">
                                         <rect key="frame" x="172" y="0.0" width="76" height="32"/>
@@ -174,6 +179,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1pP-1m-lW9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -16,15 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WL8-W3-1co">
-                                <rect key="frame" x="130" y="75" width="155" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WL8-W3-1co">
+                                <rect key="frame" x="44" y="60" width="326" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WL8-W3-1co" secondAttribute="trailing" constant="44" id="ED5-j6-biU"/>
+                            <constraint firstItem="WL8-W3-1co" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="xQI-zA-IDQ"/>
+                            <constraint firstItem="WL8-W3-1co" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="44" id="xpA-H3-3wF"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="nicknameTextField" destination="WL8-W3-1co" id="WW9-Fd-nOe"/>
