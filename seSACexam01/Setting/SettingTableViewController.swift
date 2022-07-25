@@ -79,12 +79,12 @@ class SettingTableViewController: UITableViewController {
         let sceneDelegate = windowScene?.delegate as? SceneDelegate
         
         let sb = UIStoryboard(name: "Select", bundle: nil)
-        print(#function)
-    guard let vc = sb.instantiateViewController(withIdentifier: SelectCollectionViewController.identifier) as? SelectCollectionViewController else {
+        guard let vc = sb.instantiateViewController(withIdentifier: SelectCollectionViewController.identifier) as? SelectCollectionViewController else {
         showAlert(message: "잘못된 스토리보드입니다")
         return }
+        let nav = UINavigationController(rootViewController: vc)
         
-        sceneDelegate?.window?.rootViewController = vc
+        sceneDelegate?.window?.rootViewController = nav
         sceneDelegate?.window?.makeKeyAndVisible()
     }
 }

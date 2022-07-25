@@ -118,6 +118,7 @@ class MainViewController: UIViewController {
     
     @IBAction func mealAndWaterButtonClicked(_ sender: UIButton) {
         addMealAndWaterCount(senderTag: sender.tag)
+        view.endEditing(true)
     }
    
     

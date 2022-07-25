@@ -69,6 +69,7 @@ class SelectCheckViewController: UIViewController {
     
     @IBAction func checkButtonClicked(_ sender: UIButton) {
         UserDefaults.standard.set(temporaryIndex, forKey: UserDefaultsInfo.selectedCharacterIndexFixed.rawValue)
+        UserDefaults.standard.set(true, forKey: UserDefaultsInfo.isCharacterSelected.rawValue)
         let sb = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else {
             showAlert(message: "잘못된 스토리보드입니다")
