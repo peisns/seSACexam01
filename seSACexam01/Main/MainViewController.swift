@@ -10,13 +10,16 @@ import UIKit
 class MainViewController: UIViewController {
     
     static let identifier = "MainViewController"
-
+    
     @IBOutlet weak var rightBarButtonToSetting: UIBarButtonItem!
+    
+    @IBOutlet weak var topLine: UIView!
+    
     
     @IBOutlet weak var characterWordBackImage: UIImageView!
     @IBOutlet weak var characterWordTextLabel: UILabel!
     @IBOutlet weak var characterImage: UIImageView!
-    @IBOutlet weak var characterNameLabel: UILabel!
+    @IBOutlet weak var characterNameButton: UIButton!
     @IBOutlet weak var characterExpLabel: UILabel!
     @IBOutlet weak var mealTextField: UITextField!
     @IBOutlet weak var waterTextField: UITextField!
@@ -30,7 +33,11 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //create navagation right button
+        //place top line
+        topLine.layer.borderWidth = 1
+        topLine.layer.borderColor = UIColor.systemGray4.cgColor
+        
+        //create navigation right button
         rightBarButtonToSetting.image = UIImage(systemName: "person.circle")
         self.navigationController?.navigationBar.tintColor = commonFontAndBorderColor()
         
@@ -39,36 +46,60 @@ class MainViewController: UIViewController {
         
         //set random word alignment
         characterWordTextLabel.textAlignment = .center
+        characterWordTextLabel.textColor = commonFontAndBorderColor()
+        characterWordTextLabel.font = .systemFont(ofSize: 14, weight: .semibold)
+        
+        //design character name
+        characterNameButton.setTitleColor(commonFontAndBorderColor(), for: .normal)
+        characterNameButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
+        characterNameButton.layer.borderColor = commonFontAndBorderColor().cgColor
+        characterNameButton.layer.borderWidth = 1
+        characterNameButton.layer.cornerRadius = 5
+        characterNameButton.isEnabled = false
+        
+        //design character exp
+        characterExpLabel.textAlignment = .center
+        characterExpLabel.textColor = commonFontAndBorderColor()
+        characterExpLabel.font = .systemFont(ofSize: 13, weight: .semibold)
         
         //design meal and water button
         var buttonTag = 0
         for button in mealAndWaterButtonCollection {
             button.layer.borderColor = commonFontAndBorderColor().cgColor
             button.layer.borderWidth = 1
-            button.layer.cornerRadius = 3
+            button.layer.cornerRadius = 5
             button.setTitleColor(commonFontAndBorderColor(), for: .normal)
             button.tintColor = commonFontAndBorderColor()
             button.tag = buttonTag
             buttonTag += 1
+            button.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
         }
         mealAndWaterButtonCollection[0].setTitle("밥먹기", for: .normal)
         mealAndWaterButtonCollection[0].setImage(UIImage(systemName: "drop.circle"), for: .normal)
         mealAndWaterButtonCollection[1].setTitle("물먹기", for: .normal)
         mealAndWaterButtonCollection[1].setImage(UIImage(systemName: "leaf.circle"), for: .normal)
-
+        
+        mealTextField.placeholder = "밥주세용"
+        mealTextField.textAlignment = .center
+        mealTextField.font = .systemFont(ofSize: 13)
+        waterTextField.placeholder = "물주세용"
+        waterTextField.textAlignment = .center
+        waterTextField.font = .systemFont(ofSize: 13)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //change userNickname
+        //show and change userNickname
         userNickname = UserDefaults.standard.string(forKey: UserDefaultsInfo.userNickname.rawValue) ?? "대장"
-        title = "\(userNickname)의 다마고치"
-                
+        title = "\(userNickname)님의 다마고치"
+        let textAttributes = [NSAttributedString.Key.foregroundColor:commonFontAndBorderColor()]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
         //show Character Exp and words in Label
         updateCharacterExpAndWordsLabel()
-
+        
     }
     
-    //navigation right bar button(to setting storybard) clicked
+    //navigation right bar button(to setting storyboard) clicked
     @IBAction func settingButtonClicked(_ sender: UIBarButtonItem) {
         let sb = UIStoryboard(name: "Setting", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: SettingTableViewController.identifier) as? SettingTableViewController else {
@@ -86,7 +117,7 @@ class MainViewController: UIViewController {
                 newMealCount = UserDefaults.standard.integer(forKey: UserDefaultsInfo.characterMealCount.rawValue) + 1
                 UserDefaults.standard.set(newMealCount, forKey: UserDefaultsInfo.characterMealCount.rawValue)
                 updateCharacterExpAndWordsLabel()
-            } else {  // text is vaild
+            } else {  // text is valid
                 let inputCount = Int(mealTextField.text!) ?? 0
                 mealTextField.text = "" // clear text field
                 switch inputCount {
@@ -146,7 +177,7 @@ class MainViewController: UIViewController {
             return UserInfo(level: 0, image: stringCharacterIndex + "-1")
         }
     }
-
+    
     func updateCharacterExpAndWordsLabel() {
         //load meal and water count
         let mealCount = UserDefaults.standard.integer(forKey: UserDefaultsInfo.characterMealCount.rawValue)
@@ -166,10 +197,10 @@ class MainViewController: UIViewController {
         characterImage.image = UIImage(named: userInfo.image)
         
         //show character name
-        characterNameLabel.text = CharactersInfo.characters[characterIndex].name
-        characterNameLabel.textAlignment = .center
+        characterNameButton.setTitle(CharactersInfo.characters[characterIndex].name, for: .normal)
         
         //show character Exp
         characterExpLabel.text = "LV\(userInfo.level) • 밥알 \(mealCount)개 • 물방울 \(waterCount)개"
     }
 }
+

@@ -390,6 +390,7 @@
 				DEVELOPMENT_TEAM = BG68R7N92W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = seSACexam01/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "주한솔";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Select;
@@ -420,6 +421,7 @@
 				DEVELOPMENT_TEAM = BG68R7N92W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = seSACexam01/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "주한솔";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Select;

@@ -16,68 +16,125 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hta-fM-lja">
-                                <rect key="frame" x="87" y="159" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hta-fM-lja">
+                                <rect key="frame" x="83" y="117" width="248" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hta-fM-lja" secondAttribute="height" multiplier="1:0.75" id="4aS-Ge-ENp"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="textLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnL-9H-hyH">
-                                <rect key="frame" x="172" y="213" width="71" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnL-9H-hyH">
+                                <rect key="frame" x="95" y="119.5" width="224" height="149"/>
+                                <string key="text">textLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabeltextLabel</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WvR-a6-49z">
-                                <rect key="frame" x="87" y="296" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WvR-a6-49z">
+                                <rect key="frame" x="107.5" y="303" width="199" height="197.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WvR-a6-49z" secondAttribute="height" multiplier="1:1" id="SFZ-ea-Kgn"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Character Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT0-7a-k1H">
-                                <rect key="frame" x="109" y="438" width="196" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C00-7G-Z6Y" userLabel="top line">
+                                <rect key="frame" x="20" y="88" width="374" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="1Ux-fr-jWl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uni-aS-3wC">
+                                <rect key="frame" x="176" y="509" width="62" height="34"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LVn. 밥알 n개, 물방울 n개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP4-v0-h2b">
+                                <rect key="frame" x="118.5" y="559" width="177" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LVn. 밥알 n개, 물방울 n개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP4-v0-h2b">
-                                <rect key="frame" x="87" y="467" width="240" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGx-Bv-hVE">
-                                <rect key="frame" x="109" y="509" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ma-M3-5Xs">
-                                <rect key="frame" x="225" y="511" width="91" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system" title="Button"/>
-                                <connections>
-                                    <action selector="mealAndWaterButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dLy-Rc-feG"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DOc-q4-fkt">
-                                <rect key="frame" x="109" y="551" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-1x-fPw">
-                                <rect key="frame" x="225" y="553" width="91" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system" title="Button"/>
-                                <connections>
-                                    <action selector="mealAndWaterButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y7M-CI-0YG"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GBT-gs-NhV" userLabel="Meal Stack View">
+                                <rect key="frame" x="83" y="595.5" width="248" height="32"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGx-Bv-hVE">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="32"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ma-M3-5Xs">
+                                        <rect key="frame" x="172" y="0.0" width="76" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="76" id="nb5-nd-iqL"/>
+                                            <constraint firstAttribute="height" constant="32" id="qYI-wv-XpQ"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                                        <inset key="imageEdgeInsets" minX="-4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="circle.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            </preferredSymbolConfiguration>
+                                        </state>
+                                        <connections>
+                                            <action selector="mealAndWaterButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dLy-Rc-feG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BqI-bO-WkV" userLabel="Water Stack View">
+                                <rect key="frame" x="83" y="643.5" width="248" height="32"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DOc-q4-fkt">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-1x-fPw">
+                                        <rect key="frame" x="172" y="0.0" width="76" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="76" id="4dW-bb-nMa"/>
+                                            <constraint firstAttribute="height" constant="32" id="WvE-bF-uOX"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                                        <inset key="imageEdgeInsets" minX="-4" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="circle.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            </preferredSymbolConfiguration>
+                                        </state>
+                                        <connections>
+                                            <action selector="mealAndWaterButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y7M-CI-0YG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hta-fM-lja" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="2e6-UA-mL3"/>
+                            <constraint firstItem="cnL-9H-hyH" firstAttribute="centerX" secondItem="Hta-fM-lja" secondAttribute="centerX" id="3at-Ai-3bu"/>
+                            <constraint firstItem="cnL-9H-hyH" firstAttribute="width" secondItem="Hta-fM-lja" secondAttribute="width" multiplier="0.9" id="AJL-5u-w6w"/>
+                            <constraint firstItem="nP4-v0-h2b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EhX-tt-FXe"/>
+                            <constraint firstItem="Hta-fM-lja" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="F6e-46-nbA"/>
+                            <constraint firstItem="GBT-gs-NhV" firstAttribute="width" secondItem="Hta-fM-lja" secondAttribute="width" id="RXj-a2-hTy"/>
+                            <constraint firstItem="cnL-9H-hyH" firstAttribute="height" secondItem="Hta-fM-lja" secondAttribute="height" multiplier="0.8" id="Sh0-hx-0gR"/>
+                            <constraint firstItem="Uni-aS-3wC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VMI-kB-Fhl"/>
+                            <constraint firstItem="Hta-fM-lja" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cMM-Qh-Y0s"/>
+                            <constraint firstItem="C00-7G-Z6Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dLu-ke-a6Z"/>
+                            <constraint firstItem="Uni-aS-3wC" firstAttribute="top" secondItem="WvR-a6-49z" secondAttribute="bottom" constant="8" id="euQ-Ay-ByG"/>
+                            <constraint firstItem="WvR-a6-49z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gJf-wr-fBf"/>
+                            <constraint firstItem="WvR-a6-49z" firstAttribute="width" secondItem="Hta-fM-lja" secondAttribute="width" multiplier="0.8" id="gce-vv-ufc"/>
+                            <constraint firstItem="C00-7G-Z6Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ijs-nv-12V"/>
+                            <constraint firstItem="GBT-gs-NhV" firstAttribute="top" secondItem="nP4-v0-h2b" secondAttribute="bottom" constant="16" id="pwV-sO-PTk"/>
+                            <constraint firstItem="GBT-gs-NhV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rZ6-bS-gjb"/>
+                            <constraint firstItem="cnL-9H-hyH" firstAttribute="centerY" secondItem="Hta-fM-lja" secondAttribute="centerY" constant="-15" id="sya-jo-7nz"/>
+                            <constraint firstItem="BqI-bO-WkV" firstAttribute="top" secondItem="GBT-gs-NhV" secondAttribute="bottom" constant="16" id="wdD-wq-OGh"/>
+                            <constraint firstItem="WvR-a6-49z" firstAttribute="top" secondItem="Hta-fM-lja" secondAttribute="bottom" id="wrT-A4-umB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C00-7G-Z6Y" secondAttribute="trailing" id="xcr-Xp-vPH"/>
+                            <constraint firstItem="BqI-bO-WkV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y0b-7i-eAe"/>
+                            <constraint firstItem="BqI-bO-WkV" firstAttribute="width" secondItem="Hta-fM-lja" secondAttribute="width" id="yX8-UC-yBz"/>
+                            <constraint firstItem="nP4-v0-h2b" firstAttribute="top" secondItem="Uni-aS-3wC" secondAttribute="bottom" constant="16" id="zIL-Cr-WhA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="title" id="isg-nb-2aa">
                         <barButtonItem key="backBarButtonItem" title=" " id="E8m-75-P2l"/>
@@ -90,11 +147,12 @@
                     <connections>
                         <outlet property="characterExpLabel" destination="nP4-v0-h2b" id="0aL-NY-5c3"/>
                         <outlet property="characterImage" destination="WvR-a6-49z" id="49k-lJ-dAK"/>
-                        <outlet property="characterNameLabel" destination="NT0-7a-k1H" id="SC3-t0-yvV"/>
+                        <outlet property="characterNameButton" destination="Uni-aS-3wC" id="4tD-Ze-PfB"/>
                         <outlet property="characterWordBackImage" destination="Hta-fM-lja" id="dFg-Rb-WTN"/>
                         <outlet property="characterWordTextLabel" destination="cnL-9H-hyH" id="kIz-TG-4ff"/>
                         <outlet property="mealTextField" destination="cGx-Bv-hVE" id="qXI-R9-QlS"/>
                         <outlet property="rightBarButtonToSetting" destination="N4y-Zf-PgP" id="7Vc-HE-g5j"/>
+                        <outlet property="topLine" destination="C00-7G-Z6Y" id="SBi-Z6-MkR"/>
                         <outlet property="waterTextField" destination="DOc-q4-fkt" id="vpL-t3-cHH"/>
                         <outletCollection property="mealAndWaterButtonCollection" destination="8Ma-M3-5Xs" collectionClass="NSMutableArray" id="5Ni-oC-uim"/>
                         <outletCollection property="mealAndWaterButtonCollection" destination="Uk7-1x-fPw" collectionClass="NSMutableArray" id="KAL-uJ-rwH"/>
