@@ -82,9 +82,11 @@ class MainViewController: UIViewController {
         mealTextField.placeholder = "밥주세용"
         mealTextField.textAlignment = .center
         mealTextField.font = .systemFont(ofSize: 13)
+        mealTextField.keyboardType = .numberPad
         waterTextField.placeholder = "물주세용"
         waterTextField.textAlignment = .center
         waterTextField.font = .systemFont(ofSize: 13)
+        waterTextField.keyboardType = .numberPad
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -109,8 +111,18 @@ class MainViewController: UIViewController {
     }
     
     
+    @IBAction func mealAndWaterTextFieldReturn(_ sender: UITextField) {
+        addMealAndWaterCount(senderTag: sender.tag)
+    }
+    
+    
     @IBAction func mealAndWaterButtonClicked(_ sender: UIButton) {
-        switch sender.tag {
+        addMealAndWaterCount(senderTag: sender.tag)
+    }
+   
+    
+    func addMealAndWaterCount(senderTag:Int) {
+        switch senderTag {
         case 0: // user clicked meal button
             var newMealCount = Int()
             if mealTextField.text!.isEmpty { // text is empty
