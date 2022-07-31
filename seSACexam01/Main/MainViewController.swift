@@ -45,6 +45,10 @@ class MainViewController: UIViewController {
         rightBarButtonToSetting.image = UIImage(systemName: "person.circle")
         self.navigationController?.navigationBar.tintColor = commonFontAndBorderColor()
         
+        
+        
+        
+        
         //set word's back image
         characterWordBackImage.image = UIImage(named: "bubble")
         
@@ -86,6 +90,7 @@ class MainViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         //show and change userNickname
         userNickname = UserDefaults.standard.string(forKey: UserDefaultsInfo.userNickname.rawValue) ?? "대장"
         title = "\(userNickname)님의 다마고치"
@@ -110,37 +115,28 @@ class MainViewController: UIViewController {
     
     ///remove non-digit
     @IBAction func textConvertToDigit(_ sender: UITextField) {
-        if sender.tag == 0 {
-            let convertDigit = mealTextField.text!.replacingOccurrences(of: #"\D"#, with: "", options: .regularExpression)
-            mealTextField.text = convertDigit
-        } else if sender.tag == 1 {
-            let convertDigit = waterTextField.text!.replacingOccurrences(of: #"\D"#, with: "", options: .regularExpression)
-            waterTextField.text = convertDigit
-        } else {
-            showAlert(message: "오류가 발생했습니다(convert to digit" )
-        }
+        let convertDigit = sender.text!.replacingOccurrences(of: #"\D"#, with: "", options: .regularExpression)
+        sender.text = convertDigit
     }
     
     ///add meal and water count when text is returned
     @IBAction func mealAndWaterTextFieldReturn(_ sender: UITextField) {
-        addMealAndWaterCount(senderTag: sender.tag)
+        addMealAndWaterCount(foodType: FoodType.allCases[sender.tag])
     }
     
     ///add meal and water count when button is clicked
     @IBAction func mealAndWaterButtonClicked(_ sender: UIButton) {
-        addMealAndWaterCount(senderTag: sender.tag)
+        addMealAndWaterCount(foodType: FoodType.allCases[sender.tag])
         view.endEditing(true)
     }
    
     ///function to add meal and water count
-    func addMealAndWaterCount(senderTag:Int) {
-        switch senderTag {
-        case 0: // user clicked meal button
+    func addMealAndWaterCount(foodType:FoodType) {
+        switch foodType {
+        case FoodType.meal: // user clicked meal button
             countCheck(textFieldName: mealTextField, userDefaultsRawValue: UserDefaultsInfo.characterMealCount.rawValue, maxNumber: 99, targetNameOfCount: "밥")
-        case 1: // user clicked water button
+        case FoodType.water: // user clicked water button
             countCheck(textFieldName: waterTextField, userDefaultsRawValue: UserDefaultsInfo.characterWaterCount.rawValue, maxNumber: 49, targetNameOfCount: "물")
-        default:
-            showAlert(message: "오류가 발생했습니다(mealAndWaterButton")
         }
     }
     
